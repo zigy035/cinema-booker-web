@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {MoviesPage} from "./pages/MoviePages/MoviesPage";
+import {Redirect, Route, Switch} from "react-router";
+import {NavigationBar} from "./pages/Layouts/NavigationBar";
+import {Footer} from "./pages/Layouts/Footer";
+import {HomePage} from "./pages/HomePage/HomePage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className='d-flex flex-column min-vh-100'>
+            <NavigationBar />
+            <div className='flex-grow-1'>
+                <Switch>
+                    <Route path='/' exact>
+                        <Redirect to='/home' />
+                    </Route>
+                    <Route path='/home'>
+                        <HomePage />
+                    </Route>
+                    <Route path='/movies'>
+                        <MoviesPage />
+                    </Route>
+                </Switch>
+            </div>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

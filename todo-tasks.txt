@@ -1,0 +1,22 @@
+Layout:
+    Navbar, Header, Footer
+
+User Pages:
+    HomePage /home
+        components: Carousel
+    MoviesPage /api/movies
+        components: MovieList, Paginate
+    MoviePage /api/movie/{movieId}
+        components: MovieDetails, MovieBroadcasts (select date/time)
+    MovieSeatsCheckoutPage /api/movies/broadcasts/{broadcastId}
+        components: MovieSeatSelect
+    MovieSeatsPaymentPage /api/movies/cart/{cartId}
+        components: MovieSeatsDetails, PaymentDetails
+    MovieSeatsConfirmPage /api/movies/order/{orderId}
+        components: MovieSeatConfirmDetails
+
+Admin Pages:
+    AddMoviePage /admin/movies
+    AddMovieBroadcastPage /admin/movie/broadcast (validate time ranges between broadcasts)
+    PreviewMovieBroadcasts /admin/movie/broadcast/{broadcastId}
+    PreviewMovieBroadcastSeats /admin/movie/broadcast/{broadcastId}/seats

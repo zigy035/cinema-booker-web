@@ -1,12 +1,11 @@
-import Movie from "../models/Movie";
+import DateTimeSlot from "../models/DateTimeSlot";
 
 const BASE_URL = 'http://localhost:8080';
 const BROADCAST_URL = BASE_URL + '/api/broadcasts';
 
 class BroadcastService {
 
-    //Promise<Map<string, string[]>>
-    static async getTimeSlots(movieId: number) : Promise<any> {
+    static async getTimeSlots(movieId: number) : Promise<DateTimeSlot> {
 
         try {
             const response = await fetch(BROADCAST_URL + `/movie/${movieId}`);

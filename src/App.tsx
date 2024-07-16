@@ -5,6 +5,7 @@ import {Redirect, Route, Switch} from "react-router";
 import {NavigationBar} from "./pages/Layouts/NavigationBar";
 import {Footer} from "./pages/Layouts/Footer";
 import {HomePage} from "./pages/HomePage/HomePage";
+import {MoviesDetailsPage} from "./pages/MoviePages/MovieDetailsPage";
 
 function App() {
     return (
@@ -20,6 +21,9 @@ function App() {
                     </Route>
                     <Route path='/movies'>
                         <MoviesPage />
+                    </Route>
+                    <Route path='/details/:id'>
+                        <MoviesDetailsPage/>
                     </Route>
                 </Switch>
             </div>

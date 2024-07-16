@@ -56,3 +56,30 @@
   pointer-events: none;
   cursor: default;
 }
+
+/* Movie specific CSS */
+.movie-details {
+  margin-bottom: 20px;
+}
+
+.movie-details img {
+  max-width: 100%;
+  height: auto;
+}
+
+.time-slots {
+  margin-top: 20px;
+}
+
+.time-slots ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.time-slots li {
+  margin-bottom: 5px;
+}
+
+.text-right {
+  text-align: right;
+}

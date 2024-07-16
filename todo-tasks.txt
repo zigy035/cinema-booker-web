@@ -7,8 +7,8 @@ User Pages:
     MoviesPage /api/movies
         components: MovieList, Paginate
     MoviePage /api/movie/{movieId}
-        components: MovieDetails, MovieBroadcasts (select date/time)
-    MovieSeatsCheckoutPage /api/movies/broadcasts/{broadcastId}
+        components: MovieDetails, MovieShowtimes (select date/time)
+    MovieSeatsCheckoutPage /api/movies/showtimes/{showtimeId}
         components: MovieSeatSelect
     MovieSeatsPaymentPage /api/movies/cart/{cartId}
         components: MovieSeatsDetails, PaymentDetails
@@ -17,6 +17,6 @@ User Pages:
 
 Admin Pages:
     AddMoviePage /admin/movies
-    AddMovieBroadcastPage /admin/movie/broadcast (validate time ranges between broadcasts)
-    PreviewMovieBroadcasts /admin/movie/broadcast/{broadcastId}
-    PreviewMovieBroadcastSeats /admin/movie/broadcast/{broadcastId}/seats
+    AddMovieShowtimePage /admin/movie/showtime (validate time ranges between showtimes)
+    PreviewMovieShowtimes /admin/movie/showtime/{showtimeId}
+    PreviewMovieShowtimeSeats /admin/movie/showtime/{showtimeId}/seats

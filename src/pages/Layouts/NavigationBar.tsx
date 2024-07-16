@@ -13,12 +13,21 @@ export const NavigationBar = () => {
                     <span className='navbar-toggler-icon'></span>
                 </button>
                 <div className='collapse navbar-collapse' id='navbarNavDropdown'>
-                    <ul className='navbar-nav'>
+                    <ul className='navbar-nav ms-auto'>
                         <li className='nav-item'>
                             <NavLink className='nav-link' to='/home'>Home</NavLink>
                         </li>
                         <li className='nav-item'>
-                            <NavLink className='nav-link' to='/movies'>Search Movies</NavLink>
+                            <NavLink className='nav-link' to='/movies'>Movies</NavLink>
+                        </li>
+                        <li className='nav-item'>
+                            <NavLink className='nav-link' to='/cart'>Cart</NavLink>
+                        </li>
+                        <li className='nav-item'>
+                            <NavLink className='nav-link' to='/checkout'>Checkout</NavLink>
+                        </li>
+                        <li className='nav-item'>
+                            <NavLink className='nav-link' to='/orders'>Orders</NavLink>
                         </li>
                     </ul>
                     <ul className='navbar-nav ms-auto'>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import MovieService from "../../services/MovieService";
+// import MovieService from "../../services/MovieService";
 import Movie from "../../models/Movie";
 import {MovieGridItem} from "./components/MovieGridItem";
 
@@ -9,7 +9,7 @@ export const MoviesPage: React.FC = () => {
 
     useEffect(() => {
         const getData = async () => {
-            setMovies(await MovieService.getMovies());
+            // setMovies(await MovieService.getMovies());
         };
 
         getData().then(res => console.log(res));
